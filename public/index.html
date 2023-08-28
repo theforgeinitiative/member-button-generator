@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TFI Name Button Generator</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/v/bs5/jq-3.7.0/dt-1.13.6/b-2.4.1/sl-1.7.0/datatables.min.css" rel="stylesheet">  </head>
+  <body class="d-flex h-100">
+    <div class="container-lg d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="mb-auto text-center">
+        <h1>TFI Member Button Generator</h1>
+      </header>
+      <main class="px-3">
+        <h2 class=""mt-5>Choose Name Buttons</h2>
+        <p>By default, all name buttons for the current year pending creation are shown. You may also enter barcode numbers to generate specific buttons.</p>
+        <div class="row mb-3">
+            <div class="col-6">
+              <input id="search-barcodes" type="text" class="form-control" placeholder="Barcodes (1001, 1002, 1003)" aria-label="Barcodes">
+            </div>
+            <div class="col-auto">
+                <button id="search" type="button" class="btn btn-primary">Search</button>
+            </div>
+            <div class="col-auto">
+                <button id="reset" type="button" class="btn btn-danger">Reset</button>
+            </div>
+        </div>
+        <table id="button-table" class="table table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Barcode</th>
+                    <th>Last Printed</th>
+                </tr>
+            </thead>
+        </table>
+
+        <h2 class="mt-5">Make Some Buttons!</h2>
+        <p>After selecting names above, print labels/buttons, and mark them as complete.</p>
+        <div class="row mb-3">
+            <div class="col-auto">
+                <button id="print-labels" type="button" class="btn btn-primary">Print Labels</button>
+            </div>
+            <div class="col-auto">
+                <button id="print-buttons" type="button" class="btn btn-primary">Print Buttons</button>
+            </div>
+            <div class="col-auto">
+                <button id="mark-complete" type="button" class="btn btn-success">Mark as Printed</button>
+            </div>
+        </div>
+      </main>
+      <footer class="mt-5 text-center">
+        <p>Made with ❤️ for The Forge Initiative. Find this code on <a href="https://github.com/theforgeinitiative/name-button-generator">GitHub</a></p>
+      </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/v/bs5/jq-3.7.0/dt-1.13.6/b-2.4.1/sl-1.7.0/datatables.min.js"></script>
+    <script src="assets/app.js"></script> 
+</body>
+</html>
